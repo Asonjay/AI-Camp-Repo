@@ -69,21 +69,26 @@
 <!-- put images and text here -->
           <section id="sectionPin" class="about_section">
             <div class="pin-wrap">
-              <h2 class="about_h2"> <strong>About Our Dataset:</strong> <br> We found our dataset on Kaggle.com. Inside, the dataset consisted of over 12,000 recipes, their names, their ingredients, and a picture to go along with them. The data was already scraped, so all that was required to get it ready for our AI was to clean it. </h2>
-              <img src="" alt="" class="img">
-              <h2 class="about_h2"> <strong>Preprocessing</strong> <br> Our preprocessing team took the data from Kaggle.com, and cleaned it. This involved taking out all unnecessary words and symbols, and the categories of recipes, names, pictures, and ingredients into their own lists to be fed to the AI.</h2>
+              <h2 class="about_h2"> <strong>About Our Dataset:</strong> <br> We found our dataset on Kaggle.com. Inside, the dataset consisted of over 12,000 recipes, their names, their ingredients, and a picture to go along with them. <br>The data was already scraped, so all that was required to get it ready for our AI was to clean it. </h2>
+             <img src= "{{url_for('static',filename='img/docPhotos/Kaggle.png')}}" alt="Dataset" class="img" id="ime"/>
+              <h2 class="about_h2"> <strong>Preprocessing</strong> <br> Our preprocessing team took the data from Kaggle.com, and cleaned it. <br>This involved taking out all unnecessary words and symbols, and putting the categories of recipes, names, pictures, and ingredients into their own lists to be fed to the AI.</h2>
               <figure>
                 <img src="{{url_for('static',filename='img/docPhotos/code.png')}}" alt='missing' class="img" id="ime"/>
                 <figcaption>Our two master functions for filtering out recipe categories by keywords.</figcaption>
               </figure>
-              <h2 class="h2"><strong>Features:</strong> <br> After all of the data was cleaned, we decided to make six individual AIs, one for each different type of dietary need. So, after the data was separated into its respective groups, we created the AIs using that data. </h2>
-              <img src="" alt="" class="img">
-              <h2 class="h2"><strong>Training:</strong><br> After we had created our models, we needed to train them. This involved taking the preprocessed data and feeding it to the models, and waiting. It took about 4 hours in total to train all the models, and 3000 steps per model. But, at the end of the process, we had six individual, fully trained, ready to go, AIs.</h2>
-              <img src="" alt="" class="img">
-              <h2 class="h2"><strong>Challenges</strong><br>Throughout this project, we experienced many challenges. Getting our AI to output a viable recipe was hard, so we needed to train our AIs for a very long time. A challenge we faced was that some of our ideas at the beginning of the project ended up being too challenging and time consuming to do, so we had to come up with new ideas and workarounds. Another challenge we faced was that none of our team had any front end website development experience, so we had to learn how to make our website as we went along. </h2>
-              <img scr="" alt="" class="img">
-              <h2 class="h2"><strong></strong><br></h2>
-              <img scr="" alt="" class="img">
+              <h2 class="h2"><strong>Features:</strong> <br> After all of the data was cleaned, we decided to make six individual AIs, one for each different type of dietary need. <br>So, after the data was separated into its respective groups, we created the AIs using that data. </h2>
+              <img src="{{url_for('static',filename='img/docPhotos/myplate.jpg')}}" alt='missing' class="img" id="ime"/>
+              <h2 class="h2"><strong>Training:</strong><br> After we had created our models, we needed to train them. This involved taking the preprocessed data and feeding it to the models, and waiting. <br>It took about 4 hours in total to train all the models, and 3000 steps per model.<br> But, at the end of the process, we had six individual, fully trained, ready to go, AIs.</h2>
+              <figure>
+                <img src="{{url_for('static',filename='img/docPhotos/trainin.png')}}" alt='missing' class="img" id="ime"/>
+                <figcaption>The code that we used to initiate training for the 6 different models.</figcaption>
+              </figure>
+              <h2 class="h2"><strong>Challenges</strong><br>Throughout this project, we experienced many challenges. Getting our AI to output a viable recipe was hard, so we needed to train our AIs for a very long time. <br>A challenge we faced was that some of our ideas at the beginning of the project ended up being too challenging and time consuming to do, so we had to come up with new ideas and workarounds. <br>Another challenge we faced was that none of our team had any front end website development experience, so we had to learn how to make our website as we went along. </h2>
+              <img src="{{url_for('static',filename='img/docPhotos/6287866.png')}}" alt="frustrated emoji" class="img" id="ime">
+                            <h2 class="h2"><strong></strong><br></h2>
+                            <img src="{{url_for('static',filename='img/foodies.png')}}">
+<h2 class="h2"><strong></strong><br></h2>
+
             </div>
           </section>
         </div>

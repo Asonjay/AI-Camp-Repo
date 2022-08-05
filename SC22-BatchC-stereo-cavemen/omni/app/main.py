@@ -13,6 +13,9 @@
 
 # import basics
 import os
+import requests
+from bs4 import BeautifulSoup
+
 
 # import stuff for our web server
 from flask import Flask, request, redirect, url_for, render_template, session
@@ -81,6 +84,24 @@ def hasTitle(generated):
                 return False
     else:
         return False
+    
+def get_google_img(query):
+    """
+    gets a link to the first google image search result
+    :param query: search query string
+    :result: url string to first result
+    """
+    url = "https://www.google.com/search?q=" + str(query) + "&source=lnms&tbm=isch"
+    headers={'User-Agent':"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36"}
+
+    html = requests.get(url, headers=headers).text
+
+    soup = BeautifulSoup(html, 'html.parser')
+    image = soup.find_all("img") # ,{"class":"t0fcAb"}
+
+    if not image:
+        return 
+    return image[1]['src']
 
 @app.route(f'{base_url}/generate_text/', methods=["POST"])
 def generate_text():
@@ -114,8 +135,9 @@ def generate_text():
         # component_list[0] => ingredients
         # component_list[1][0] => name
         # component_list[1][1] => instructions
-        generated = "<h3 style='font-family:Copperplate;'>" + str(component_list[1][0]) + "</h3>" + str(component_list[0]) + '<br>' + str(component_list[1][1])
-        
+        generated = "<h3 style='font-family:Copperplate;'>" + str(component_list[1][0]) + "</h3>" + str(component_list[0]) + '<br>' + str(component_list[1][1]) + '<br>' +"<img src=\"" + str(get_google_img(component_list[1][0])) + "\" alt=\"recipe picture\">"
+        # <img src=\" + str(get_google_img(component_list[1][0])) + \" alt="Girl in a jacket" width="500" height="600">
+
 #         tempStr = ""
 #         tempGenerated = []
 #         symbols = ["Ω",'π','√']
