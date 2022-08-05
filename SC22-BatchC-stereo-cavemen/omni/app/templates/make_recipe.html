@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <style>
+    .screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(251,215,3); /*What color does the website use*/
+  display: none;
+  align-items: center;
+}
+
+.loader {
+  width: 100%;
+  height: 15px;
+  text-align: center;
+}
+
+.dot {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  margin: 0 2px;
+  display: inline-block;
+}
+
+.dot:first-child:before {
+  animation-delay: 0ms;
+}
+
+.dot:first-child:after {
+  animation-delay: 0ms;
+}
+
+.dot:last-child:before {
+  animation-delay: 200ms;
+}
+
+.dot:last-child:after {
+  animation-delay: 200ms;
+}
+
+.dot:before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background-color: blue;
+  animation-name: dotHover;
+  animation-duration: 900ms;
+  animation-timing-function: cubic-bezier(.82,0,.26,1);
+  animation-iteration-count: infinite;
+  animation-delay: 100ms;
+  background: white;
+  border-radius: 100%;  
+}
+
+.dot:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: black;
+  box-shadow: 0px 0px 1px black;
+  opacity: .20;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  bottom: -2px;
+  border-radius: 100%;
+  animation-name: dotShadow;
+  animation-duration: 900ms;
+  animation-timing-function: cubic-bezier(.82,0,.26,1);
+  animation-iteration-count: infinite;
+  animation-delay: 100ms;
+}
+
+@keyframes dotShadow {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    opacity: 0;
+    transform: scaleX(.6);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes dotHover {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: -50px;
+    transform: scale(1.1);
+  }
+  100% {
+    top: 0;
+  }
+}
+    
+    /*_________________________________________*/
+    
+    #everything {
+      display: block;
+    }
+    
+    #gen {
+      margin:auto;
+    }
+    #generatebuton {
+      margin:20px;
+    }
+    #generatedr {
+      font-family: "Garamond", serif;
+      background-color: beige;
+      width: 1000px;
+      border: 10px ridge grey;
+      padding: 20px;
+      margin: auto;
+      box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.4);
+      background: 
+        linear-gradient(rgba(222, 184, 135, 0.6), beige);
+    }
+    
+    /*custom font*/
+    @import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+    /*basic reset*/
+    
+
+    html {
+      height: 100%;
+      /*Image only BG fallback*/
+
+      /*background = gradient + image pattern combo*/
+      background: 
+        linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+    }
+
+body {
+
+}
+/*form styles*/
+#msform {
+	width: 400px;
+	margin: 50px auto;
+	text-align: center;
+	position: relative;
+}
+#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+	
+	/*stacking fieldsets above each other*/
+	position: relative;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+/*inputs*/
+#msform input, #msform textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
+/*buttons*/
+#msform .action-button {
+	width: 100px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+/*headings*/
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+#progressbar li {
+	list-style-type: none;
+	color: white;
+	text-transform: uppercase;
+	font-size: 9px;
+	width: 33.33%;
+	float: left;
+	position: relative;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 10px;
+	color: #333;
+	background: white;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: #27AE60;
+	color: white;
+}
+  </style>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=
+    "viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <title> Caesar </title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='/img/caesarFavicon.ico')}}" />
+    <!-- Bootstrap icons-->
+    <link href=
+    "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    rel="stylesheet"><!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{{url_for('static',filename='/css/styles.css')}}" rel=
+    "stylesheet">
+  </head>
+  <body>
+    <div class="screen" id="loadi">
+
+  <div class="loader">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+
+</div>
+    <div id="everything">
+    <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-lg-5">
+                <a class="navbar-brand" href="{{url_for('home')}}">Caesar's Salads</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                      <li class="nav-item">   
+                      <div class="container_stupid">
+                          <nav class="nav-nav nav-item">
+                            <li><a href="{{url_for('home')}}">Home</a></li>
+                            <li><a href="{{url_for('documentation')}}">About</a></li>
+                            <li><a href="{{url_for('team_members')}}">Team</a></li>
+                            <li><a href="https://www.ai-camp.org/"><img src="{{url_for('static',filename='/img/AICAMP.png')}}" alt="AI camp icon" style="width:25px;height:25px;"></a></li>
+                          </nav>
+                        </div>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <!-- Header-->
+
+    <header class="py-5">
+      <div class="container px-lg-5">
+        <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
+          <div class="m-4 m-lg-5">
+            <h1 class="display-5 fw-bold">
+              Caesar Invites you to the Kitchen!
+            </h1>
+
+            <p class="fs-4">
+              This is where the best recipes are produced and they are
+              always unique in their own special way!
+            </p>
+            <!-- <a class="btn btn-primary btn-lg" href="#!">Call to action</a> -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Page Content-->
+
+    <section class="pt-4">
+      <div class="container px-lg-5">
+        <!-- Page Features-->
+
+        <div class="row gx-lg-5">
+
+
+          <div class="col-lg-6 col-xxl-4 mb-5" id="gen">
+            <div class="card bg-light border-0 h-100">
+              <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                
+                 
+                
+<img src="{{url_for('static',filename='/img/Logo2.png')}}" alt= "nondairy icon" style ="display:block; margin:auto;width:100px;height:100px;">
+                <h2 class="fs-4 fw-bold">
+                  The Generator
+                </h2>
+
+                <p class="mb-0">
+                  Input a prompt beginning your desired recipe, select the model you would like to generate it with, and your recipe will be generated.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    <!-- Footer-->
+
+    <!-- the recipe prompt input -->
+    <!-- <form class="mb-5" method="post" id="contactForm" name="contactForm" action="{{url_for('generate_text')}}">
+       <div class="row">
+         <div class="col-md-12 form-group mb-5">
+           <textarea class="form-control" name="prompt" id="message" cols="20" rows="4" placeholder="Your recipe prompt..."></textarea>
+         </div>
+       </div>
+       <div class="row" id="radios">
+         <!-- Buttons for AI selection --> <!--
+         <label for="meat">Meat</label>
+         <input id="meat" type="radio" name="type" value="meatAI" />
+         <label for="dairy">Dairy</label>
+         <input id="dairy" type="radio" name="type" value="dairyAI" />
+         <label for="gluten">Gluten</label>
+         <input id="gluten" type="radio" name="type" value="glutenAI" />
+         <label for="meatFree">Vegetarian</label>
+         <input id="meatFree" type="radio" name="type" value="veganAI"/>
+         <label for="dairyFree">Dairy-free</label>
+         <input id="dairyFree" type="radio" name="type" value="dairyFreeAI"/>
+         <label for="glutenFree">Gluten-free</label>
+         <input id="glutenFree" type="radio" name="type" value="glutenFreeAI" />
+       </div>
+       <div class="row">
+         <input type="submit" value="Generate" class=" py-2 px-4" id="generatebuton">
+       </div>
+    </form> -->
+    
+    <!-- multistep form -->
+    <form id="msform" method="post" id="contactForm" name="contactForm" action="{{url_for('generate_text')}}">
+  <!-- progressbar -->
+  <ul id="progressbar">
+    <li class="active">ENTER PROMPT</li>
+    <li>SELECT MODEL</li>
+  </ul>
+  <!-- fieldsets -->
+  <fieldset>
+    <h2 class="fs-title">Recipe Prompt</h2>
+    <input type="text" name="prompt" placeholder="Your recipe prompt..." />
+    <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
+  <fieldset>
+    <h2 class="fs-title">Select Model</h2>
+    <h3 class="fs-subtitle">Select from our 6 categories of recipe-generating models.</h3>
+    <div class="row" id="radios">
+         <!-- <input type="text" name="type" placeholder="da ai" /><strong></strong> -->
+         <!-- Buttons for AI selection -->
+         <label for="meat">Meat</label>
+         <input id="meat" type="radio" name="type" value="meatAI" />
+         <label for="dairy">Dairy</label>
+         <input id="dairy" type="radio" name="type" value="dairyAI" />
+         <label for="gluten">Gluten</label>
+         <input id="gluten" type="radio" name="type" value="glutenAI" />
+         <label for="meatFree">Vegetarian</label>
+         <input id="meatFree" type="radio" name="type" value="veganAI"/>
+         <label for="dairyFree">Dairy-free</label>
+         <input id="dairyFree" type="radio" name="type" value="dairyFreeAI"/>
+         <label for="glutenFree">Gluten-free</label>
+         <input id="glutenFree" type="radio" name="type" value="glutenFreeAI" />
+       </div>
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+
+      <input type="submit" value="Generate" class="next action-button" onclick="load()">
+
+  </fieldset>
+
+</form>
+
+    <div id='generatedr'>
+      <h4>{{generated | safe}}</h4>
+    </div>
+
+    <a class="button-container-1" href="{{url_for('make_recipe')}}">
+    <button type="button" name="Hover">Reset</button>
+    </a>
+
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">
+          Copyright © Caesar 2022
+        </p>
+      </div>
+    </footer>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="{{url_for('static',filename='/js/scripts.js')}}"></script>
+  </body>
+
+</html>

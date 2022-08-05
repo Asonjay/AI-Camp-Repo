@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Caesar</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='/img/caesarFavicon.ico')}}" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{{url_for('static',filename='/css/styles.css')}}" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-lg-5">
+                <a class="navbar-brand" href="{{url_for('home')}}">Caesar's Salads</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                      <li class="nav-item">   
+                      <div class="container_stupid">
+                          <nav class="nav-nav nav-item">
+                            <li><a href="{{url_for('home')}}">Home</a></li>
+                            <li><a href="{{url_for('documentation')}}">About</a></li>
+                            <li><a href="{{url_for('team_members')}}">Team</a></li>
+                            <li><a href="https://www.ai-camp.org/"><img src="{{url_for('static',filename='/img/AICAMP.png')}}" alt="AI camp icon" style="width:25px;height:25px;"></a></li>
+                          </nav>
+                        </div>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+<!--Work Distribution-->
+        <!-- Header-->
+        <header class="py-5">
+            <div class="container px-lg-5">
+                <div class="textbox" style="border:outset;border-width:15px;border-color:hsl(50, 80%, 64%);">
+                  <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
+                      <div class="m-4 m-lg-5 mb-7">
+                          <h1 class="display-5 fw-bold">Work Distribution</h1>
+                          <p class="fs-4">For this project to have been possible, the overall goal was split into tasks that was distributed to each team member to work out. Here is how our work was split: </p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </header>
+        <!-- Page Content-->
+        <section class="pt-4">
+            <div class="container px-lg-5">
+                <!-- Page Features-->
+                <div class="row gx-lg-5">
+                    <div class="col-lg-6 col-xxl-4 mb-6" style="border:outset;border-width:15px;border-color:hsl(50, 80%, 64%);">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                
+                                <h2 class="fs-4 fw-bold">Data Preprocessing</h2>
+                                <p class="mb-0"> The data preprocessing team worked on splitting our data into the different food groups such as "dairy free" or "vegetarian". They helped clean out our data that we used for model training. This job was completed by none other than Tony and Yatin!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4 mb-6" style="background-color:hsl(50, 80%, 54%);">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                
+                                <h2 class="fs-4 fw-bold">Expansion</h2>
+                                <p class="mb-0">Lincoln and Alex worked as a part of the expansion team. They contributed to image scraping on Google to collect correct food images that corresponded to the recipes. They also made a difficulty rating system to make it even easier to choose a recipe.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4 mb-6" style="background-color:hsl(50, 80%, 54%);">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                               
+                                <h2 class="fs-4 fw-bold">Aitextgen</h2>
+                                <p class="mb-0">The Aitextgen team consisting of Sherry and Chloe experimented with ways to train models and figured out how word generation works. They worked on how to use a gpt_2 model while the others got the data ready for training. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4 mb-6" style="border:outset;border-width:15px;border-color:hsl(50, 80%, 64%);">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                               
+                                <h2 class="fs-4 fw-bold">Front End</h2>
+                                <p class="mb-0">The front end development team worked on this very website! They wrote all the text you see here and even added custom images. This team was made up of Lincoln, Alex, Sherry, and Chloe.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4 mb-6" style="border:outset;border-width:15px;border-color:hsl(50, 80%, 64%);">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <h2 class="fs-4 fw-bold">Back End</h2>
+                                <p class="mb-0">Tony and Yatin worked on back end development of our website. Not only did they train all the models, but they also helped connect our back end text generations to the front end website. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4 mb-6" style="background-color:hsl(50, 80%, 54%);">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                               
+                                <h2 class="fs-4 fw-bold">Instructor</h2>
+                                <p class="mb-0">Special thanks to our instructor Jason for making this project possible. From providing us with resources on coding to helping us debug, we really could not have done it without him!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Name Cards-->
+        <section class="pt-4">
+          <div class="mail-container">
+              <div class="mail-wrapper">
+                  <div class="mail-content">
+                      <div class="profile-wrapper">
+                          <div class="profile-header profile-same">
+                              <div class="profile-avatar">
+                                  <img src=" {{url_for('static',filename='img/NameCardPics/ButterflySelfie.jpg')}}" alt="Picture of Sherry">
+                              </div>
+                              <h2>Sherry</h2>
+                              <br>
+                          </div>
+                          <div class="profile-bio profile-same">
+                              <p class="short-description">Hi! My name is Sherry...</p>
+                              <div id="profile-bio-wrapper">
+                                  <div id="show-more-icon" class="no-select">
+                                      <i class="fa fa-chevron-circle-up"></i>
+                                  </div>
+                                  <div class="social-list">
+                                      <ul>
+                                          <li class="bio-item paper-button"><a href="https://discordapp.com/users/673739173449957386" title="Discord" target="_blank"><i class="bi bi-discord"></i></a></li>
+                                          <li class="bio-item paper-button"><a href="https://www.instagram.com/sherrrryyyy27" target="_blank"><i class="bi bi-instagram"></i></a></li>
+                                      </ul>
+                                  </div>
+                                  <div class="bio-extra">
+                                      <p>Hi, my name is Sherry and I am about to be a sophomore in high school.</p>
+                                      <p>I have four pets, two cats and two guinea pigs. I also have a younger sister that is 8 years old </p>
+                                      <p>I was first introduced to coding in first grade in computers class at school. It instantly became my favorite subject, and I have enjoyed coding ever since. </p>
+                                      <p>My favorite thing to do outside of school is play badminton. I train a lot, play competitively, and play for my school on varsity badminton.
+                                      </p>
+                                      <!--<a href="https://discordapp.com/users/673739173449957386" style="text-align:center;"><i class="bi bi-discord"></i></a> 
+                                      <a href="https://www.instagram.com/sherrrryyyy27" style="text-align:center;"><i class="bi bi-instagram"></i></a>-->
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="mail-wrapper">
+                    <div class="mail-content">
+                        <div class="profile-wrapper">
+                            <div class="profile-header profile-same">
+                                <div class="profile-avatar">
+                                    <img src="{{url_for('static',filename='img/NameCardPics/thumbnail_Image.jpg')}}" alt="Picture of Lincoln">
+                                </div>
+                                <h2>Lincoln</h2>
+                                <br>
+                            </div>
+                            <div class="profile-bio profile-same">
+                           <p class="short-description">Hello! My name is Lincoln and this is a little bit about me.</p>
+                                <div id="profile-bio-wrapper1">
+                                    <div id="show-more-icon1" class="no-select">
+                                        <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="social-list">
+                                        <ul>
+                                            <li class="bio-item paper-button"><a href="https://discordapp.com/users/820778862605631499" title="Discord" target="_blank"><i class="bi bi-discord"></i></a></li>
+                                          <li class="bio-item paper-button"><a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="bio-extra">
+                                        <p>Hello, my name is Lincoln. I am a sophomore in highschool.</p>
+                                        <p>I have one dog, who I love, and one brother, who I also love.</p>
+                                        <p> I love love sports and science, but I have just recently gotten into coding. I hope to take this hobby to something of greater heights and be successful.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+              <div class="mail-wrapper">
+                    <div class="mail-content">
+                        <div class="profile-wrapper">
+                            <div class="profile-header profile-same">
+                                <div class="profile-avatar">
+                                    <img src=" " alt="Picture of Yatin">
+                                </div>
+                                <h2>Yatin</h2>
+                                <br>
+                            </div>
+                            <div class="profile-bio profile-same">
+                                <p class="short-description">Hey! I'm Yatin, and this is who I am.</p>
+                                <div id="profile-bio-wrapper2">
+                                    <div id="show-more-icon2" class="no-select">
+                                        <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="social-list">
+                                        <ul>
+                                            <li class="bio-item paper-button"><a href="" title="Discord" target="_blank"><i class="bi bi-discord"></i></a></li>
+                                          <li class="bio-item paper-button"><a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="bio-extra">
+                                        <p> Now that I have your attention, I'm Yatin. <br> I think that I am a pretty chill person who enjoys programming, running, tennis, cooking (*trying to cook), and trying out new things! I got into programming around 7th grade after I took an online class.  Turns out that it was college level which is why I never could come close to finishing it.</p>
+                                      <p>  I'm currently a senior at Farmington High, Michigan, and can't wait to leave high school. I fully intend to keep with computer science in college wherever I decide to attend.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+              <div class="mail-wrapper">
+                    <div class="mail-content">
+                        <div class="profile-wrapper">
+                            <div class="profile-header profile-same">
+                                <div class="profile-avatar">
+                                    <img src="{{url_for('static',filename='img/NameCardPics/Alex.jpg')}}" alt="Picture of Alex">
+                                </div>
+                                <h2>Alex</h2>
+                                <br>
+                            </div>
+                            <div class="profile-bio profile-same">
+                                <p class="short-description">Hello, I'm Alex...</p>
+                                <div id="profile-bio-wrapper3">
+                                    <div id="show-more-icon3" class="no-select">
+                                        <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="social-list">
+                                        <ul>
+                                            <li class="bio-item paper-button"><a href="https://discordapp.com/users/521156044723060747" title="Discord" target="_blank"><i class="bi bi-discord"></i></a></li>
+                                          <li class="bio-item paper-button"><a href="https://www.instagram.com/alexandra_h.7/" target="_blank"><i class="bi bi-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="bio-extra">
+                                        <p>Hello, I'm Alex. I'm a sophomore in high school, and I enjoy playing volleyball, giving speeches, reading books, going to museums, watching serial killer documentaries, hiking, and much more. I became interested in programming during the pandemic, but I've barely touched Visual Studio Code since then. I'm happy to be at AI Camp because I am able to bring back an old hobby and use it to create something fun and practical.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+              <div class="mail-wrapper">
+                    <div class="mail-content">
+                        <div class="profile-wrapper">
+                            <div class="profile-header profile-same">
+                                <div class="profile-avatar">
+                                    <img src="{{url_for('static',filename='img/NameCardPics/tony.jpg')}}" alt="Picture of Tony">
+                                </div>
+                                <h2>Tony</h2>
+                                <br>
+                            </div>
+                            <div class="profile-bio profile-same">
+                                <p class="short-description">My name is Tony, and I am...</p>
+                                <div id="profile-bio-wrapper4">
+                                    <div id="show-more-icon4" class="no-select">
+                                        <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="social-list">
+                                        <ul>
+                                            <li class="bio-item paper-button"><a href="https://discordapp.com/users/346267201738899457" title="Discord" target="_blank"><i class="bi bi-discord"></i></a></li>
+                                          <li class="bio-item paper-button"><a href="https://www.instagram.com/tonyf156" target="_blank"><i class="bi bi-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="bio-extra">
+                                        <p>My name is Tony, and I am a sophomore at Newton North High School, in Newton, Massachusetts.</p>
+                                        <p>I got into coding in 3rd grade, when I joined a Scratch club at my school. Since then, I've taken a few coding classes, and plan on doing something computer science related as my career.</p>
+                                        <p>A few of my hobbies include running, cycling, and playing the piano, which I have been doing for about 7 years.</p>
+                                        <p>I decided to participate in AI camp this year because a teacher at my school told me about it, and it has been an enjoyable and fulfilling experience so far.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+              <div class="mail-wrapper">
+                    <div class="mail-content">
+                        <div class="profile-wrapper">
+                            <div class="profile-header profile-same">
+                                <div class="profile-avatar">
+                                    <img src="{{url_for('static',filename='img/NameCardPics/chloe.jpg')}}" alt="Picture of Chloe">
+                                </div>
+                                <h2>Chloe</h2>
+                                <br>
+                            </div>
+                            <div class="profile-bio profile-same">
+                                <p class="short-description">Hello, my name is Chloe. I am...</p>
+                                <div id="profile-bio-wrapper5">
+                                    <div id="show-more-icon5" class="no-select">
+                                        <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="social-list">
+                                        <ul>
+                                            <li class="bio-item paper-button"><a href="https://discordapp.com/users/Gus_Gus#8663/" title="Discord" target="_blank"><i class="bi bi-discord"></i></a></li>
+                                          <li class="bio-item paper-button"><a href="https://www.instagram.com/gus___gus____/?r=nametag" target="_blank"><i class="bi bi-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="bio-extra">
+                                        <p>Hello, my name is Chloe. I am a sophomore in high school.</p>
+                                        <p>I have a cat, a small bird, and 11 chickens. The reason we named our AI Caesar is because my bird&#8217;s name is Caesar. I also have an older sister.</p>
+                                        <p>I have been interested in programming for a few years, since my Dad is software engineer. Before AI camp, I had only learned the basics of a few programming languages. It was really fun to make a big project with everyone and put the programming I learned to good use!</p>
+                                        <p>I enjoy riding horses, baking, and biking. I also participate in my school&#8217;s plays. I am a big animal lover and I would love to have many pets someday.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <div class="bottom-ball-fill"></div>
+        </div>
+      </section>
+
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Caesar 2022</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    </body>
+</html>
+  

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+      #ime {
+        display: block;
+        max-width:750px;
+        max-height:750px;
+        width: auto;
+        height: auto;
+      }
+    </style>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Caesar</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='/img/caesarFavicon.ico')}}" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{{url_for('static',filename='/css/styles.css')}}" rel="stylesheet" />
+        <link rel="icon" href="{{url_for('static',filename='/img/aicamplogo.png')}}" type="image/x-icon">
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="https://use.typekit.net/skn8ash.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="about_body">
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-lg-5">
+                <a class="navbar-brand" href="{{url_for('home')}}">Caesar's Salads</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                      <li class="nav-item">   
+                      <div class="container_stupid">
+                          <nav class="nav-nav nav-item">
+                            <li><a href="{{url_for('home')}}">Home</a></li>
+                            <li><a href="{{url_for('documentation')}}">About</a></li>
+                            <li><a href="{{url_for('team_members')}}">Team</a></li>
+                            <li><a href="https://www.ai-camp.org/"><img src="{{url_for('static',filename='/img/AICAMP.png')}}" alt="AI camp icon" style="width:25px;height:25px;"></a></li>
+                          </nav>
+                        </div>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="py-5">
+            <div class="container px-lg-5">
+                <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
+                    <div class="m-4 m-lg-5">
+                        <h1 class="display-5 fw-bold">About Our Work</h1>
+                        <p class="fs-4">Learn about the process of how we created our amazing AI and the steps we took to get there.</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Page Content-->
+        <div class="container1", id="about_content">
+          <strong><marquee behavior="alternate" scrollamount=15>
+            Scroll Here!<img src="{{url_for('static',filename='img/boi-removebg-preview.png')}}" width=50px height=50px/>
+          </marquee></strong>
+<!-- put images and text here -->
+          <section id="sectionPin" class="about_section">
+            <div class="pin-wrap">
+              <h2 class="about_h2"> <strong>About Our Dataset:</strong> <br> We found our dataset on Kaggle.com. Inside, the dataset consisted of over 12,000 recipes, their names, their ingredients, and a picture to go along with them. The data was already scraped, so all that was required to get it ready for our AI was to clean it. </h2>
+              <img src="" alt="" class="img">
+              <h2 class="about_h2"> <strong>Preprocessing</strong> <br> Our preprocessing team took the data from Kaggle.com, and cleaned it. This involved taking out all unnecessary words and symbols, and the categories of recipes, names, pictures, and ingredients into their own lists to be fed to the AI.</h2>
+              <figure>
+                <img src="{{url_for('static',filename='img/docPhotos/code.png')}}" alt='missing' class="img" id="ime"/>
+                <figcaption>Our two master functions for filtering out recipe categories by keywords.</figcaption>
+              </figure>
+              <h2 class="h2"><strong>Features:</strong> <br> After all of the data was cleaned, we decided to make six individual AIs, one for each different type of dietary need. So, after the data was separated into its respective groups, we created the AIs using that data. </h2>
+              <img src="" alt="" class="img">
+              <h2 class="h2"><strong>Training:</strong><br> After we had created our models, we needed to train them. This involved taking the preprocessed data and feeding it to the models, and waiting. It took about 4 hours in total to train all the models, and 3000 steps per model. But, at the end of the process, we had six individual, fully trained, ready to go, AIs.</h2>
+              <img src="" alt="" class="img">
+              <h2 class="h2"><strong>Challenges</strong><br>Throughout this project, we experienced many challenges. Getting our AI to output a viable recipe was hard, so we needed to train our AIs for a very long time. A challenge we faced was that some of our ideas at the beginning of the project ended up being too challenging and time consuming to do, so we had to come up with new ideas and workarounds. Another challenge we faced was that none of our team had any front end website development experience, so we had to learn how to make our website as we went along. </h2>
+              <img scr="" alt="" class="img">
+              <h2 class="h2"><strong></strong><br></h2>
+              <img scr="" alt="" class="img">
+            </div>
+          </section>
+        </div>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Caesar 2022</p>              </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <!-- Core theme JS-->
+        <script src="{{url_for('static',filename='/js/scripts.js')}}"></script>
+    </body>
+</html>

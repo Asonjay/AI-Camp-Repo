@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--<div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-collection"></i></div> -->
+    <head> 
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Caesar</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='/img/caesarFavicon.ico')}}" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{{url_for('static',filename='/css/styles.css')}}" rel="stylesheet" />
+    </head>
+    <body class="homebody">     
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-lg-5">
+                <a class="navbar-brand" href="{{url_for('home')}}">Caesar's Salads</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                      <li class="nav-item">   
+                      <div class="container_stupid">
+                          <nav class="nav-nav nav-item">
+                            <li><a href="{{url_for('home')}}">Home</a></li>
+                            <li><a href="{{url_for('documentation')}}">About</a></li>
+                            <li><a href="{{url_for('team_members')}}">Team</a></li>
+                            <li><a href="https://www.ai-camp.org/"><img src="{{url_for('static',filename='/img/AICAMP.png')}}" alt="AI camp icon" style="width:25px;height:25px;"></a></li>
+                          </nav>
+                        </div>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Header-->
+        <header class="py-5">
+            <div class="container px-lg-5">
+                <div class= "textbox" style="border:outset;border-width:15px;border-color:hsl(50, 80%, 64%);">i
+                    <div class="m-4 m-lg-5">
+                        <img src="{{url_for('static',filename='/img/Logo2.png')}}" alt= "nondairy icon" style ="display:block; margin:auto;width:100px;height:100px;">
+                        <h1 class="display-5 fw-bold">Caesar: The Recipe Generating AI</h1>
+                        <p class="fs-4">Our AI strives to help you create new recipes that include any ingredients and needs that you have. View the different categories below.</p>
+                         <a class="button-container-3" href="{{url_for('make_recipe')}}">
+                            <span class="mas">Start your meal generator journey</span>
+                            <button type="button" name="Hover">Start your meal generator journey</button>
+                         </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Page Content-->
+        <section id="first" class="pt-4">
+            <div class="container px-lg-5">
+                <!-- Page Features-->
+                <div class="row gx-lg-5">
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+<a href="{{url_for('make_recipe')}}" ><img src="{{url_for('static',filename='/img/Food favicons/Meat.png')}}" alt= "meat icon" style ="display:block; margin:auto;width:100px;height:100px;"></a>
+                      <div class="textbox">
+                                <h2 class="fs-4 fw-bold">Meet the Meat</h2>
+                                <p class="mb-0">Our meat recipe generating AI will help to give you meat containing recipes</p>
+                         </div>
+                  </div>
+               
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                      <a href="{{url_for('make_recipe')}}"><img src="{{url_for('static',filename='/img/Food favicons/Dairy-modified.png')}}" alt= "diary icon" style ="display:block; margin:auto;width:100px;height:100px;"></a>
+                        <div class="textbox">
+                                <h2 class="fs-4 fw-bold">Dairy Nice To Meet You</h2>
+                                <p class="mb-0">We dairy you to try this dairy generator.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                      <a href = "{{url_for('make_recipe')}}"> <img src="{{url_for('static',filename='/img/Food favicons/Nondairy-modified.png')}}" alt= "nondairy icon" style ="display:block; margin:auto;width:100px;height:100px;"></a>
+                        <div class="textbox">
+                               
+                                <h2 class="fs-4 fw-bold">Utterly Disgusting</h2>
+                                <p class="mb-0">Be nice to cows. Try these non-dairy recipes.</p>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                      <a href = "{{url_for('make_recipe')}}"> <img src="{{url_for('static',filename='/img/Food favicons/Veggies-modified.png')}}" alt= "veggies icon" style ="display:block; margin:auto;width:100px;height:100px;"></a>
+                        <div class="textbox">
+                                
+                                <h2 class="fs-4 fw-bold">Da' Veggies </h2>
+                                <p class="mb-0">This vegetarian generator will sastisfy your dinner needs minus the meat!</p>
+                            </div>
+                        </div>
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                      <a href ="{{url_for('make_recipe')}}"> <img src="{{url_for('static',filename='/img/Food favicons/Gluten-modified.png')}}" alt= "gluten icon" style ="display:block; margin:auto;width:100px;height:100px;"></a>
+                        <div class="textbox">
+                                
+                                <h2 class="fs-4 fw-bold">Hay yall'</h2>
+                                <p class="mb-0">This gluten-rich generator will give you all of your favorite bready meals and more!</p>
+                            </div>
+                        </div>
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+<a href ="{{url_for('make_recipe')}}"> <img src="{{url_for('static',filename='/img/Food favicons/Glutenfree-modified.png')}}" alt= "glutenfree icon" style ="display:block; margin:auto;width:100px;height:100px;"></a>
+                        <div class="textbox">
+                                
+                                <h2 class="fs-4 fw-bold">Gluten is Gluttonous</h2>
+                                <p class="mb-0">Be kind to your stomach. Try these gluten-free recipes.</p>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+        </section>
+
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Caesar 2022</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{{url_for('static',filename='/js/scripts.js')}}"></script>
+    </body>
+</html>
